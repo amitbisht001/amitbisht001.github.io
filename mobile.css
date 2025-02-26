@@ -1,0 +1,153 @@
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  header .header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    padding: 15px 0;
+  }
+  nav .nav-btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  /* Main */
+  main {
+    padding: 20px;
+  }
+
+  main .hero {
+    padding: 50px 20px;
+  }
+
+  main .hero h1{
+    font-size: 40px;
+  }
+  main .hero h2{
+    font-size: 20px;
+  }
+  main .hero p{
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  main .hero .hero-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .hero .hero-btn a{
+    padding: 10px 20px;
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+  }
+
+  /* Experience */
+  .experience {
+    padding: 20px;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  /* Skills */
+  .skills {
+    padding: 20px;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills-card ul {
+    gap: 10px;
+  }
+
+  /* Education */
+  .education {
+    padding: 20px;
+  }
+
+  .education h2 {
+    font-size: 2rem;
+  }
+
+  .education-container {
+    padding-left: 20px;
+  }
+
+  .education-card {
+    width: auto;
+  }
+
+  .education-card:hover {
+    transform: translateX(20px);
+  }
+
+  /* Contact */
+  .contact {
+    padding: 20px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+  }
+}
+
+/* For extra small devices */
+@media screen and (max-width: 480px) {
+  main .hero h1{
+    font-size: 25px;
+  }
+  main .hero h2{
+    font-size: 15px;
+  }
+  main .hero p{
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .skills-card ul li {
+    width: 100%;
+    text-align: center;
+  }
+}

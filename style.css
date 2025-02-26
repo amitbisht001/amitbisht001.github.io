@@ -1,0 +1,281 @@
+/* Global */
+:root {
+  --color: #3a4edc;
+  --text-color: #111;
+  --bg-color: #eee;
+  --white: #fff;
+  --black: #000;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: sans-serif;
+}
+.spacer {
+  margin-bottom: 50px;
+}
+
+/* Header */
+header {
+  background-color: var(--white);
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header .header-logo {
+  color: var(--color);
+  width: 15%;
+}
+header nav {
+  width: 85%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-toggle {
+  display: none;
+  background-color: var(--white);
+  color: var(--text-color);
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+nav .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+nav .nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav .nav-links a:hover {
+  color: var(--color);
+}
+nav .nav-btn a {
+  background-color: var(--color);
+  color: var(--bg-color);
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+nav .nav-btn a:hover {
+  border-radius: 0;
+}
+
+/* Main */
+main {
+  padding: 50px 100px;
+}
+main .hero {
+  background: linear-gradient(120deg, #4158d0 0%, #3a4edc 46%, #162d94 100%);
+  padding: 150px 50px;
+  border-radius: 10px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+main .hero h1 {
+  font-size: 3rem;
+}
+main .hero p {
+  font-size: 1.2rem;
+}
+main .hero .hero-btn a {
+  background-color: var(--white);
+  color: var(--color);
+  text-decoration: none;
+  padding: 15px 25px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  transition: all 0.5s ease;
+}
+main .hero .hero-btn a:nth-child(2) {
+  background-color: var(--color);
+  color: var(--white);
+}
+main .hero .hero-btn a:hover {
+  border-radius: 0;
+}
+
+/* Experience */
+.experience {
+  background-color: var(--white);
+  padding: 50px 100px;
+}
+.experience h2 {
+  font-size: 3rem;
+  color: var(--color);
+}
+.experience-container {
+  margin: 50px 0;
+}
+.experience-card {
+  border: 2px solid var(--color);
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+.experience-card h4 {
+  font-size: 1.5rem;
+  color: var(--color);
+}
+.experience-card a {
+  color: var(--color);
+  text-decoration: none;
+}
+.experience-card a:hover {
+  text-decoration: underline;
+}
+
+/* Skills */
+.skills {
+  background-color: var(--color);
+  padding: 50px 100px;
+  color: var(--white);
+}
+.skills h2 {
+  font-size: 3rem;
+}
+.skills-container {
+  margin: 50px 0;
+}
+.skills-card {
+  border: 2px solid var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+.skills-card ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skills-card ul li {
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: var(--white);
+  color: var(--color);
+  border-radius: 10px;
+  box-shadow: inset -5px -5px 10px var(--color);
+  border: 1px solid var(--white);
+}
+
+/* Education */
+.education {
+  padding: 50px 100px;
+}
+.education h2 {
+  font-size: 3rem;
+}
+.education-container {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 200px;
+}
+.education-card {
+  width: 70%;
+  border-left: 2px solid var(--color);
+  padding: 20px;
+  line-height: 1.5;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color);
+  border-radius: 50%;
+  left: -8.5px; /* Centers the circle on the border */
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid var(--bg-color);
+}
+
+.education-card:hover {
+  transform: translateX(50px);
+  background: linear-gradient(90deg, var(--color), var(--bg-color));
+  color: var(--white);
+}
+
+/* Add this to maintain circle visibility on hover */
+.education-card:hover::before {
+  background-color: var(--bg-color);
+  border-color: var(--color);
+}
+
+/* Contact */
+.contact {
+  background-color: var(--white);
+  padding: 50px 100px;
+}
+.contact h2 {
+  font-size: 3rem;
+  color: var(--color);
+}
+.contact-container {
+  margin: 50px 0;
+}
+.contact-card {
+  border: 2px solid var(--color);
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color);
+  padding: 50px 100px;
+  color: var(--white);
+  line-height: 1.5;
+}
+footer h2 {
+  font-size: 3rem;
+}
+footer .footer-social {
+  font-size: 2rem;
+  padding: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+footer .footer-social a {
+  color: var(--white);
+  text-decoration: none;
+}
+footer .footer-copy a {
+  color: var(--white);
+  text-decoration: none;
+}
+footer .footer-copy a:hover {
+  text-decoration: underline;
+}
